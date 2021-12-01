@@ -19,12 +19,19 @@
 
 	nav {
 		flex-wrap: wrap;
-		height: 8em;
+		height: 3em;
 		width: 100%;
+	}
+
+	nav + span {
+		display: flex;
+		flex-direction: column;
 	}
 
 	nav h1 {
 		font-size: 0.8rem;
+		margin: 0;
+		padding: 10px;
 	}
 
 	nav a:hover {
@@ -33,30 +40,36 @@
 
 	nav a {
 		animation: none;
-		font-size: 1.1em;
+		font-size: 0.8em;
+		margin: 0;
+		padding: 7px;
+		font-weight: 800;
 	}	
 
 	header {
+		height: 50vh;
+	}
 
-		padding: 10px;
-		height: 43vh;
+	header span {
+		margin: 20px;
+		padding: 0;
 	}
 
 	header .img-container {
 	}
 
 	header img {
-		width: 6rem;
+		width: 10rem;
 	}
 
 	header span > h2 {
-		font-size: 1.2em;	
+		font-size: 1.8em;	
 		margin: 0;
 		padding: 0;
 	}
 
 	header span > h3 {
-		font-size: 0.4em;
+		font-size: 0.8em;
 		margin: 0;
 		padding: 0;
 	}
@@ -103,26 +116,37 @@
 	}
 
 	header {
-
+		flex-direction: column;
 		padding: 10px;
 		height: 40vh;
+		margin: 0;
+		padding: 0;
+	}
+
+	header span {
+		margin: 10px;
+		padding: 0;
 	}
 
 	header .img-container {
+		margin: 0;
+		padding: 0;
 	}
 
 	header img {
-		width: 5rem;
+		width: 7rem;
+		margin: 0;
+		padding: 0;
 	}
 
 	header span > h2 {
-		font-size: 1em;	
+		font-size: 1.5em;	
 		margin: 0;
 		padding: 0;
 	}
 
 	header span > h3 {
-		font-size: 0.3em;
+		font-size: 0.8em;
 		margin: 0;
 		padding: 0;
 	}
