@@ -1,0 +1,272 @@
+:root {
+	--fully-black: rgba(0, 0, 0, 1);
+	--black-95: rgba(0, 0, 0, 0.95);
+	--white-95: rgba(240, 240, 240, 0.95);
+	--light-grey: #cccccc;
+	--green-shade: #a4d874;
+	--light-pink: #ff8ff9;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto Condensed', sans-serif;
+	background-color: var(--fully-black);
+	color: var(--white-95);
+}
+
+a {text-decoration: none; color: var(--light-grey) ;}
+
+nav {
+	background-color: var(--black-95);
+	height: 4rem;
+	padding: 0px 50px 0px 0px;
+	margin-right: 0px ;
+	width: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	z-index: 5;
+}
+
+nav h1 {
+	font-size: 1.5rem;
+	padding: 0px 50px;
+}
+
+nav a {
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--green-shade);
+	padding: 0px;
+	margin: 20px;
+	font-size: 0.9rem;
+	transform: scale(1.0);
+
+	animation-name: menu-unhover;
+	animation-duration: 0.05s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+}
+
+nav a:hover {
+	animation-name: menu-hover;
+	animation-duration: 0.08s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+}
+
+nav span {
+	display: flex;
+	align-items: center;
+	margin-right: 50px;
+}
+
+nav h1 {
+	font-family: 'Cinzel Decorative', cursive;
+}
+
+header {
+	height: 70vh;
+	padding-top: 50px;
+	/*background-image: url("../imgs/black_sand.JPG");*/
+	background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)), url("../imgs/black_sand.JPG") no-repeat center center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+header img {
+	width: 17rem;
+	border-radius: 4%;
+}
+
+.img-container {
+	position: relative;
+}
+
+.img-container .play-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.6));
+
+	transition-duration: 1s;
+	transition-timing-function: ease-in;
+}
+
+.img-container .play-overlay img {
+	width: 5rem;
+}
+
+.img-container:hover .play-overlay {
+	opacity: 1;
+
+	transition-duration: 0.5s;
+}
+
+header span {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	margin: 60px;
+}
+
+header span > h2 {
+	font-size: 2em;
+	padding: auto;
+	margin: 0;
+	color: var(--green-shade);
+	border-bottom-style: solid;
+	border-width: 0.2rem;
+
+	transition-duration: 0.25s;
+
+}
+
+header span > h3 a{
+	font-size: 4em;
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+
+	animation-name: link-unhover;
+	animation-duration: 0.25s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+
+	transition-duration: 0.25s;
+
+}
+
+header span > h3:hover a{
+	animation-name: link-hover;
+	animation-duration: 0.25s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+
+	color: var(--green-shade);
+	border-bottom-style: solid;
+	border-width: 0.2rem;
+	border-color: var(--green-shade);
+	transition-duration: 0.25s;
+}
+
+header span > h3:hover + h2 {	
+	color: var(--white-95);
+	border-width: 0rem;
+	transition-duration: 0.25s;
+}
+
+hr {
+	width: 90%;
+}
+
+main {
+	padding: 3% 10%;
+	font-size: 2em;
+
+	position: relative;
+	z-index: 2;
+}
+
+main .grid-container {
+	margin-top: 50px;
+	display: grid;
+	justify-items: center;
+	align-content: center;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 3em;
+}
+
+main .grid-container section {
+	position: relative;
+	width: 5em;
+	height: 280px;
+	align-self: center;
+	justify-self: center;
+	margin: 0;
+	padding: 0;
+	transform: scale(1);
+	transition-duration: 0.5s;
+}
+
+main .grid-container section:hover{
+	border-style: solid;
+	border-width: 5px;
+	border-color: var(--green-shade);
+	border-radius: 5%;
+	transform: scale(1.1);
+	transition-duration: 0.5s;
+	height: 270px;
+}
+
+main .grid-container section > img {
+	width: 5em;
+	border-radius: 50%;
+	transition-duration: 0.5s;
+}
+
+main .grid-container section p {
+	text-align: center;
+}
+
+main .grid-container section .play-overlay {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.6));
+
+	transition-duration: 0.5s;
+}
+
+main .grid-container section:hover > .play-overlay {
+	opacity: 1;
+	border-radius: 4%;
+	transition-duration: 0.5s;
+}
+
+main .grid-container section .play-overlay img {
+	width: 1em;
+}
+
+main .grid-container section:hover > img {
+	border-radius: 5%;
+	transition-duration: 0.5s;
+	filter: blur(3px);
+}
+
+main .grid-container section:hover > p {
+	border-radius: 5%;
+	transition-duration: 0.5s;
+	filter: blur(3px);
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: safe center;
+	z-index: 2;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url("../imgs/black_sand.JPG") no-repeat center center;
+	background-size: cover;
+	height: 10rem;
+	color: var(--green-shade);
+	font-weight: 800;
+}
